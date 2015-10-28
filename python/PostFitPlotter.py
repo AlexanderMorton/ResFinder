@@ -1,4 +1,4 @@
-import ROOT
+﻿import ROOT
 import math
 ROOT.gROOT.SetBatch(True)
 ROOT.gROOT.ProcessLine(ROOT.gSystem.ExpandPathName('.x $ROOTCOREDIR/scripts/load_packages.C'))
@@ -14,6 +14,7 @@ class Samp:
     self.norm=norm
 
 def plotInputs(inputsPath, outputPath, channels, backgrounds, signals, signalpt=Samp("",9,1)):
+  print "plotInputs info: ", inputsPath, outputPath, channels, backgrounds, signals, signalpt
   #for mass in signal:
   #  thisSig = "h_"+str(mass)+"_TeV_HVT"
   #  #add to list?

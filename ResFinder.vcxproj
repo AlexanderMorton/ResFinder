@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F1D55524-D6B8-423F-B7E3-6DA2ADE16206}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="root\AtlasLabels.cxx" />
+    <ClCompile Include="root\BackgroundTemplateAdder.cxx" />
+    <ClCompile Include="root\BinnedWorkspaceBuilder.cxx" />
+    <ClCompile Include="root\Channel.cxx" />
+    <ClCompile Include="root\DownVariationAdder.cxx" />
+    <ClCompile Include="root\fileHolder.cxx" />
+    <ClCompile Include="root\findSigma.cxx" />
+    <ClCompile Include="root\HistoCollection.cxx" />
+    <ClCompile Include="root\HistoLumiRescaler.cxx" />
+    <ClCompile Include="root\HypoTestInvTool.cxx" />
+    <ClCompile Include="root\HypoTestTool.cxx" />
+    <ClCompile Include="root\LimitRunner.cxx" />
+    <ClCompile Include="root\LimitTool.cxx" />
+    <ClCompile Include="root\ManualHistoCollector.cxx" />
+    <ClCompile Include="root\minimize.cxx" />
+    <ClCompile Include="root\MultiplicativeFactor.cxx" />
+    <ClCompile Include="root\parseString.cxx" />
+    <ClCompile Include="root\Plotter.cxx" />
+    <ClCompile Include="root\PullBreakdownTool.cxx" />
+    <ClCompile Include="root\PullPlotter.cxx" />
+    <ClCompile Include="root\PullRunner.cxx" />
+    <ClCompile Include="root\PullTool.cxx" />
+    <ClCompile Include="root\Sample.cxx" />
+    <ClCompile Include="root\saveAscii.cxx" />
+    <ClCompile Include="root\SignalInjector.cxx" />
+    <ClCompile Include="root\StatisticalResults.cxx" />
+    <ClCompile Include="root\StatisticalResultsCollection.cxx" />
+    <ClCompile Include="root\TreeHistoCollector.cxx" />
+    <ClCompile Include="root\Variation.cxx" />
+    <ClCompile Include="root\VHAnalysisRunner.cxx" />
+    <ClCompile Include="root\VVJJAnalysisRunner.cxx" />
+    <ClCompile Include="root\VVJJValidationRunner.cxx" />
+    <ClCompile Include="root\VVllqqAnalysisRunner.cxx" />
+    <ClCompile Include="root\VVllqqValidationRunner.cxx" />
+    <ClCompile Include="root\VVlvqqAnalysisRunner.cxx" />
+    <ClCompile Include="root\VVlvqqValidationRunner.cxx" />
+    <ClCompile Include="root\WorkspaceCollection.cxx" />
+    <ClCompile Include="root\WorkspaceCollector.cxx" />
+    <ClCompile Include="root\WorkspaceEditor.cxx" />
+    <ClCompile Include="util\RFtest.cxx" />
+    <ClCompile Include="util\splitHistFile.cxx" />
+    <ClCompile Include="util\VHprocessor.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resonancefinder\AtlasLabels.h" />
+    <ClInclude Include="resonancefinder\AtlasStyle.h" />
+    <ClInclude Include="resonancefinder\AtlasUtils.h" />
+    <ClInclude Include="resonancefinder\BackgroundTemplateAdder.h" />
+    <ClInclude Include="resonancefinder\BinnedWorkspaceBuilder.h" />
+    <ClInclude Include="resonancefinder\Channel.h" />
+    <ClInclude Include="resonancefinder\DownVariationAdder.h" />
+    <ClInclude Include="resonancefinder\fileHolder.h" />
+    <ClInclude Include="resonancefinder\findSigma.h" />
+    <ClInclude Include="resonancefinder\HistoCollection.h" />
+    <ClInclude Include="resonancefinder\HistoLumiRescaler.h" />
+    <ClInclude Include="resonancefinder\HypoTestInvTool.h" />
+    <ClInclude Include="resonancefinder\HypoTestTool.h" />
+    <ClInclude Include="resonancefinder\IAnalysisRunner.h" />
+    <ClInclude Include="resonancefinder\IBinnedAnalysisRunner.h" />
+    <ClInclude Include="resonancefinder\IBinnedTreeAnalysisRunner.h" />
+    <ClInclude Include="resonancefinder\IHistoCollector.h" />
+    <ClInclude Include="resonancefinder\IHistoManipulator.h" />
+    <ClInclude Include="resonancefinder\ILimitTool.h" />
+    <ClInclude Include="resonancefinder\ITreeRunner.h" />
+    <ClInclude Include="resonancefinder\IWorkspaceBuilder.h" />
+    <ClInclude Include="resonancefinder\IWorkspaceCollector.h" />
+    <ClInclude Include="resonancefinder\IWorkspaceManipulator.h" />
+    <ClInclude Include="resonancefinder\LimitRunner.h" />
+    <ClInclude Include="resonancefinder\LimitTool.h" />
+    <ClInclude Include="resonancefinder\log.h" />
+    <ClInclude Include="resonancefinder\ManualHistoCollector.h" />
+    <ClInclude Include="resonancefinder\minimize.h" />
+    <ClInclude Include="resonancefinder\MultiplicativeFactor.h" />
+    <ClInclude Include="resonancefinder\parseString.h" />
+    <ClInclude Include="resonancefinder\Plotter.h" />
+    <ClInclude Include="resonancefinder\PullBreakdownTool.h" />
+    <ClInclude Include="resonancefinder\PullPlotter.h" />
+    <ClInclude Include="resonancefinder\PullRunner.h" />
+    <ClInclude Include="resonancefinder\PullTool.h" />
+    <ClInclude Include="resonancefinder\RooStatsUtils.h" />
+    <ClInclude Include="resonancefinder\Sample.h" />
+    <ClInclude Include="resonancefinder\saveAscii.h" />
+    <ClInclude Include="resonancefinder\SignalInjector.h" />
+    <ClInclude Include="resonancefinder\StatisticalResults.h" />
+    <ClInclude Include="resonancefinder\StatisticalResultsCollection.h" />
+    <ClInclude Include="resonancefinder\TreeHistoCollector.h" />
+    <ClInclude Include="resonancefinder\Variation.h" />
+    <ClInclude Include="resonancefinder\VHAnalysisRunner.h" />
+    <ClInclude Include="resonancefinder\VVJJAnalysisRunner.h" />
+    <ClInclude Include="resonancefinder\VVJJValidationRunner.h" />
+    <ClInclude Include="resonancefinder\VVllqqAnalysisRunner.h" />
+    <ClInclude Include="resonancefinder\VVllqqValidationRunner.h" />
+    <ClInclude Include="resonancefinder\VVlvqqAnalysisRunner.h" />
+    <ClInclude Include="resonancefinder\VVlvqqValidationRunner.h" />
+    <ClInclude Include="resonancefinder\WorkspaceCollection.h" />
+    <ClInclude Include="resonancefinder\WorkspaceCollector.h" />
+    <ClInclude Include="resonancefinder\WorkspaceEditor.h" />
+    <ClInclude Include="root\LinkDef.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
