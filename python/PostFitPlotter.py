@@ -244,6 +244,7 @@ def makePostFitPlots(analysis, releaseDir, inputTag, massPoints, channels, backg
   #get background norm for this mass point
   fidx = 0
   for filename in massPointFiles:
+    print "FileName ", filename
     f = ROOT.TFile.Open(filename)
     postFitvars = f.Get("fitresult_simPdf_obsData")
     for bkg in backgrounds:
@@ -285,7 +286,7 @@ def makePostFitPlots(analysis, releaseDir, inputTag, massPoints, channels, backg
 if __name__ == '__main__':
 
   #mass points we want to produce
-  massPoints =[ 1800, 2400 ]
+  massPoints =[ 1000,  ]
 
   #Channels included in the fit. These are used to build the input histogram filenames
   channels = ['lvJ_0tag_0additionaltag_unblind_SR', 'lvJ_1tag_0additionaltag_unblind_SR', 'lvJ_2tag_0additionaltag_unblind_SR', 'lvJ_0tag_1additionaltag_unblind_SR', 'lvJ_1tag_1additionaltag_unblind_SR', 'lvJ_2tag_1additionaltag_unblind_SR']
@@ -304,13 +305,14 @@ if __name__ == '__main__':
   ]
 
   signals = ['HVT']
-
+#'{releaseDir}/{analysis}/data/{inputTag}'
   #path used to store the histograms
   analysis = 'WHlvbb_Wprime'
-  releaseDir = 'run2_4ifb'
+  releaseDir = 'run2_current'
   inputTag = 'flat_syst_Oct20'
 
   #run it
+  print "Make plots!"
   makePostFitPlots(analysis, releaseDir, inputTag, massPoints, channels, backgrounds, signals)
 
 
