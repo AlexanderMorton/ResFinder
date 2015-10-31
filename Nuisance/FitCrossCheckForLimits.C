@@ -194,7 +194,7 @@ namespace LimitCrossCheck{
   //======================================================
   // ================= Main function =====================
   //======================================================
-  void PlotFitCrossChecks(const char* infile          = "WorkspaceForTest1.root",
+  void PlotFitCrossChecks(const char* infile          = "results_WHlvbb_Wprime_flat_syst_Oct20.root",
 			  const char* outputdir       = "./results/",
 			  const char* workspaceName   = "combined",
 			  const char* modelConfigName = "ModelConfig",
@@ -3850,7 +3850,7 @@ void FitCrossCheckForLimits(const Algs algorithm         = PlotHistosBeforeFit,
                             float mu                    = 0,
                             float sigma                 = 1,
                             bool IsConditional          = false,
-                            const char* infile          = "WorkspaceForTest1.root",
+                            const char* infile          = "results_WHlvbb_Wprime_flat_syst_Oct20.root",     // "WorkspaceForTest1.root",
                             const char* outputdir       = "./results/",
                             const char* workspaceName   = "combined",
                             const char* modelConfigName = "ModelConfig",
