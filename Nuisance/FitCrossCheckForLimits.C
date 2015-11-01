@@ -2533,7 +2533,7 @@ namespace LimitCrossCheck{
     latex->SetText(0.925,0.925, fitStr);
 
     // y axis
-    frame2->updateYAxis(min,5.0);
+  //  frame2->updateYAxis(min,5.0);
     frame2->GetYaxis()->SetRangeUser(min,5.0);
     frame2->GetYaxis()->SetTitle("#Delta [-Log(L)]");
 
