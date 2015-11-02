@@ -123,8 +123,8 @@ namespace LimitCrossCheck{
   // Global variables;
   // User configuration one
   bool drawPlots(true);                    // create eps & png files and creat a webpage
-  bool plotRelative(false);                 // plot % shift of systematic
-  bool draw1DResponse(false);		    // draw 1D response for each NP 
+  bool plotRelative(true);                 // plot % shift of systematic
+  bool draw1DResponse(true);		    // draw 1D response for each NP 
   bool UseMinosError(false);                // compute minos error (if false : use minuit error)
   int isBlind(0);                           // 0: Use observed Data 1: use Asimov data 2: use toydata
   double mu_asimov(0.0);                    // mu value used to generate Asimov dataset (not used if isBlind==0)
@@ -196,7 +196,7 @@ namespace LimitCrossCheck{
   //======================================================
   void PlotFitCrossChecks(const char* infile          = "results_WHlvbb_Wprime_flat_syst_Oct20.root",
 			  const char* outputdir       = "./results/",
-			  const char* workspaceName   = "combined",
+			  const char* workspaceName   = "ws_1000p000",
 			  const char* modelConfigName = "ModelConfig",
 			  const char* ObsDataName     = "obsData"){
     
@@ -3446,7 +3446,7 @@ namespace LimitCrossCheck{
       return;
     }
     if(!(RooWorkspace*) file->Get(workspaceName)){
-      cout <<"workspace not found" << endl;
+      cout <<"workspace not found. Name:" << workspaceName << endl;
       return;
     }
     
