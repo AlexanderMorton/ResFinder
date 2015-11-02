@@ -122,7 +122,7 @@ namespace LimitCrossCheck{
 
   // Global variables;
   // User configuration one
-  bool drawPlots(true);                    // create eps & png files and creat a webpage
+  bool drawPlots(false);                    // create eps & png files and creat a webpage
   bool plotRelative(false);                 // plot % shift of systematic
   bool draw1DResponse(false);		    // draw 1D response for each NP 
   bool UseMinosError(false);                // compute minos error (if false : use minuit error)
@@ -194,9 +194,9 @@ namespace LimitCrossCheck{
   //======================================================
   // ================= Main function =====================
   //======================================================
-  void PlotFitCrossChecks(const char* infile          = "results_WHlvbb_Wprime_flat_syst_Oct20.root",
+  void PlotFitCrossChecks(const char* infile          = "WorkspaceForTest1.root",
 			  const char* outputdir       = "./results/",
-			  const char* workspaceName   = "combined",
+			  const char* workspaceName   = "ws_1000p000",
 			  const char* modelConfigName = "ModelConfig",
 			  const char* ObsDataName     = "obsData"){
     
@@ -205,13 +205,13 @@ namespace LimitCrossCheck{
     // -----------------------------------------------------------------------------------
     // 1 - Plot nominal and +/- Nsigma (for each nuisance paramater) for Data, signal+bkg
     // -----------------------------------------------------------------------------------
-    PlotHistosBeforeFit(1.0,0.0); // (nSigma,mu)
+    //PlotHistosBeforeFit(1.0,0.0); // (nSigma,mu)
     
 
     // -----------------------------------------------------------------------------------
     // 2 - Control plots for morphing (ie, -1/0/+1 sigma --> continuous NP)
     // -----------------------------------------------------------------------------------    
-    PlotMorphingControlPlots();
+    //PlotMorphingControlPlots();
 
 
     // ----------------------------------------------------------------------------------
@@ -225,21 +225,21 @@ namespace LimitCrossCheck{
     // --------------------------------------------------------------------------------------------
     // 4 - Plot the unconditionnal fitted nuisance paramters value (theta fitted while mu is fixed)
     // -------------------------------------------------------------------------------------------
-    IsConditional = true;
-    PlotHistosAfterFitEachSubChannel(IsConditional, 0.0);
-    PlotHistosAfterFitGlobal(IsConditional,0.0);
+    //IsConditional = true;
+    //PlotHistosAfterFitEachSubChannel(IsConditional, 0.0);
+    //PlotHistosAfterFitGlobal(IsConditional,0.0);
 
 
     // -------------------------------------------
     // 5 - Plot the nuisance parameters versus mu
     // -------------------------------------------
-    PlotsNuisanceParametersVSmu(); // This can take time
+    //PlotsNuisanceParametersVSmu(); // This can take time
 
 
     // -------------------------------------------
     // 6 - Plot the pulls and stat test from toys
     // -------------------------------------------
-    PlotsStatisticalTest(0,0);
+    //PlotsStatisticalTest(0,0);
 
     Finalize();
     return;
@@ -2533,7 +2533,7 @@ namespace LimitCrossCheck{
     latex->SetText(0.925,0.925, fitStr);
 
     // y axis
-    frame2->updateYAxis(min,5.0);
+  //  frame2->updateYAxis(min,5.0);
     frame2->GetYaxis()->SetRangeUser(min,5.0);
     frame2->GetYaxis()->SetTitle("#Delta [-Log(L)]");
 
@@ -3850,7 +3850,7 @@ void FitCrossCheckForLimits(const Algs algorithm         = PlotHistosBeforeFit,
                             float mu                    = 0,
                             float sigma                 = 1,
                             bool IsConditional          = false,
-                            const char* infile          = "results_WHlvbb_Wprime_flat_syst_Oct20.root",     // "WorkspaceForTest1.root",
+                            const char* infile          = "WorkspaceForTest1.root",
                             const char* outputdir       = "./results/",
                             const char* workspaceName   = "combined",
                             const char* modelConfigName = "ModelConfig",
